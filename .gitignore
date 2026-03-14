@@ -1,0 +1,76 @@
+# =========================
+# DATASETS (large files)
+# =========================
+
+data/
+processed_stock_news_data/
+Sentiment analysis/
+StockMarketDataset/
+
+*.csv
+*.parquet
+*.zip
+*.gz
+
+# Allow only small example files if needed
+!data/sample_data.csv
+!results/sample_weekly_sentiment.csv
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Environment
+# =========================
+
+.env
+venv/
+.venv/
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# System files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Model files
+# =========================
+
+*.pt
+*.pth
+*.bin
+
+# =========================
+# Kaggle credentials
+# =========================
+
+kaggle.json
+
+# =========================
+# Temporary outputs
+# =========================
+
+outputs/
+temp/
+tmp/
