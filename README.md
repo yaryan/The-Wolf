@@ -22,4 +22,3 @@ Python, PyTorch, Hugging Face Transformers, and Stable-Baselines3, with evaluati
 through both predictive metrics and financial backtesting. In real-world settings, such a system
 could assist investors and financial institutions in detecting market-moving signals earlier, improv-
 ing risk management, and enabling more data-driven investment strategies.
-1
