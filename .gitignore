@@ -1,20 +1,23 @@
 # =========================
-# DATASETS (large files)
+# LARGE DATASETS (ignore)
 # =========================
 
 data/
 processed_stock_news_data/
-Sentiment analysis/
 StockMarketDataset/
 
-*.csv
-*.parquet
-*.zip
-*.gz
+nasdaq_exteral_data.csv
+All_external.csv
 
-# Allow only small example files if needed
-!data/sample_data.csv
-!results/sample_weekly_sentiment.csv
+# Ignore all CSV by default
+*.csv
+
+# =========================
+# ALLOW SENTIMENT OUTPUTS
+# =========================
+
+!Sentiment analysis/
+!Sentiment analysis/*.csv
 
 # =========================
 # Jupyter
@@ -30,21 +33,14 @@ StockMarketDataset/
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
 # =========================
-# Environment
+# Environments
 # =========================
 
 .env
 venv/
 .venv/
-
-# =========================
-# Logs
-# =========================
-
-*.log
 
 # =========================
 # System files
@@ -54,23 +50,15 @@ venv/
 Thumbs.db
 
 # =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
 # Model files
 # =========================
 
 *.pt
 *.pth
 *.bin
-
-# =========================
-# Kaggle credentials
-# =========================
-
-kaggle.json
-
-# =========================
-# Temporary outputs
-# =========================
-
-outputs/
-temp/
-tmp/
