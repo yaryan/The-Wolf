@@ -54,8 +54,12 @@ This project expects two datasets:
 
 ### TESTING
 Run testing.ipynb using the dataset link, which contains the models, you can change the following path, if need be:
-`DATA_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecast_data"
-TEST_JSONL = os.path.join(DATA_DIR, "test.jsonl")
 
-MODEL_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecaster_model_multi"
-BASE_MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"`
+```DATA_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecast_data"```
+
+```TEST_JSONL = os.path.join(DATA_DIR, "test.jsonl")```
+
+
+```MODEL_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecaster_model_multi"```
+
+
