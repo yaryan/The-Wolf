@@ -1,24 +1,52 @@
 # The-Wolf
-The WOLF (Weighted Observation of Latent Finance) A News-Aware Multimodal AI Agent for Financial Market Prediction. 
 
-Financial markets are strongly influenced by real-world events, where corporate announcements,
-economic developments, and global news can significantly affect investor sentiment and stock price
-movements. However, traditional forecasting approaches often rely primarily on historical price
-data and fail to fully capture the predictive signals embedded within unstructured textual informa-
-tion. The WOLF (Weighted Observation of Latent Finance) aims to address this gap by
-developing a multimodal artificial intelligence system that integrates financial news sentiment with
-corresponding stock market data to improve short-term price prediction. By combining sentiment-
-aware insights with numerical time-series features, the system seeks to uncover hidden relationships
-between market perception and price behavior, ultimately supporting more informed and intelligent
-trading decisions.
-The project will leverage large-scale public datasets containing financial news articles and histor-
-ical stock prices. Transformer-based language models will be used to extract contextual embeddings
-and sentiment indicators from news data, which will then be temporally aligned with stock features
-such as OHLC values, trading volume, and technical indicators. These inputs will be fused within
-a deep learning framework to generate predictive signals, which will further power a reinforcement
-learning agent capable of making buy, hold, or sell decisions in a simulated trading environment
-that incorporates real-world constraints like transaction costs. The system will be developed using
-Python, PyTorch, Hugging Face Transformers, and Stable-Baselines3, with evaluation conducted
-through both predictive metrics and financial backtesting. In real-world settings, such a system
-could assist investors and financial institutions in detecting market-moving signals earlier, improv-
-ing risk management, and enabling more data-driven investment strategies.
+**The WOLF** (**W**eighted **O**bservation of **L**atent **F**inance) is a news-aware multimodal AI pipeline for short-term financial market prediction. It combines **historical stock price data** with **financial news sentiment** to generate next-day stock price forecasts.
+
+Financial markets are influenced not only by past price movements, but also by real-world events such as earnings reports, analyst actions, regulatory developments, product launches, and macroeconomic news. Many traditional forecasting systems rely mainly on numerical time-series data and miss predictive signals contained in unstructured text. WOLF is designed to bridge that gap by aligning market news with stock price history and using both sources in a unified modeling workflow.
+
+In this project, stock OHLCV data and company-specific news articles are processed together. News articles are filtered by ticker, aligned to trading dates, scored with **FinBERT** for sentiment, and converted into structured context that complements price-based technical signals such as returns, volatility, and RSI. These inputs are then transformed into instruction-style training examples for a language model, which is fine-tuned to predict the **next trading-day adjusted close price**.
+
+The implementation is built in **Python** using **PyTorch**, **Hugging Face Transformers**, **PEFT/LoRA**, **Datasets**, and common data science libraries such as **Pandas** and **NumPy**. Training for the experiments in this repository was run on an **NVIDIA H100 GPU**.
+
+---
+
+## Dataset
+
+This project expects two datasets:
+
+1. **Stock price CSV files**  
+   Format:
+   - `stock_prices/AAPL.csv`
+   - `stock_prices/AMZN.csv`
+
+2. **News CSV files**  
+   Format:
+   - `news/AAPL_news.csv`
+   - `news/AMZN_news.csv`
+
+
+
+- **Dataset link:** [https://drive.google.com/drive/folders/1Ibr0TcWWV7pH-9d8eZadGEYgVo5C4SPB?usp=sharing]
+
+---
+
+## Project Structure
+
+### Google Colab / Google Drive layout
+
+```bash
+/content/drive/MyDrive/FOA_Data/
+├── stock_prices/
+│   ├── AAPL.csv
+│   ├── AMZN.csv
+│   └── ...
+├── news/
+│   ├── AAPL_news.csv
+│   ├── AMZN_news.csv
+│   └── ...
+├── llm_forecast_data/
+│   ├── train.jsonl
+│   ├── val.jsonl
+│   ├── test.jsonl
+│   └── test_predictions.csv
+└── llm_forecaster_model_multi/
