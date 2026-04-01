@@ -49,8 +49,10 @@ This project expects two datasets:
 │   ├── test.jsonl
 │   └── test_predictions.csv
 └── llm_forecaster_model_multi/
+```
+---
 
-#TESTING
+### TESTING
 Run testing.ipynb using the dataset link, which contains the models, you can change the following path, if need be:
 `DATA_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecast_data"
 TEST_JSONL = os.path.join(DATA_DIR, "test.jsonl")
