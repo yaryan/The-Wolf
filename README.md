@@ -1,4 +1,4 @@
-# The-Wolf
+readme_text = r"""# The-Wolf
 
 **The WOLF** (**W**eighted **O**bservation of **L**atent **F**inance) is a news-aware multimodal AI pipeline for short-term financial market prediction. It combines **historical stock price data** with **financial news sentiment** to generate next-day stock price forecasts.
 
@@ -24,9 +24,8 @@ This project expects two datasets:
    - `news/AAPL_news.csv`
    - `news/AMZN_news.csv`
 
-
-
-- **Dataset link:** [https://drive.google.com/drive/folders/1Ibr0TcWWV7pH-9d8eZadGEYgVo5C4SPB?usp=sharing]
+**Dataset link:**  
+[Google Drive Dataset Folder](https://drive.google.com/drive/folders/1Ibr0TcWWV7pH-9d8eZadGEYgVo5C4SPB?usp=sharing)
 
 ---
 
@@ -50,3 +49,11 @@ This project expects two datasets:
 │   ├── test.jsonl
 │   └── test_predictions.csv
 └── llm_forecaster_model_multi/
+
+#TESTING
+Run testing.ipynb using the dataset link, which contains the models, you can change the following path, if need be:
+`DATA_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecast_data"
+TEST_JSONL = os.path.join(DATA_DIR, "test.jsonl")
+
+MODEL_DIR = "/content/drive/MyDrive/FOA_Data/llm_forecaster_model_multi"
+BASE_MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"`
