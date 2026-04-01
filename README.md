@@ -1,4 +1,4 @@
-readme_text = r"""# The-Wolf
+## The-Wolf
 
 **The WOLF** (**W**eighted **O**bservation of **L**atent **F**inance) is a news-aware multimodal AI pipeline for short-term financial market prediction. It combines **historical stock price data** with **financial news sentiment** to generate next-day stock price forecasts.
 
